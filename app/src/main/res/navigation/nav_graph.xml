@@ -9,5 +9,18 @@
         android:id="@+id/homeFragment"
         android:name="com.example.ntpclient.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_ntpFragment"
+            app:destination="@id/ntpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ntpFragment"
+        android:name="com.example.ntpclient.ui.ntp.NtpFragment"
+        android:label="fragment_ntp"
+        tools:layout="@layout/fragment_ntp">
+        <argument
+            android:name="ipAddress"
+            app:argType="string" />
+    </fragment>
 </navigation>

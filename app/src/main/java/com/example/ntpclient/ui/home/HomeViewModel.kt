@@ -3,12 +3,16 @@ package com.example.ntpclient.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.ntpclient.util.Event
 
 class HomeViewModel : ViewModel() {
-    private val _ipAddress = MutableLiveData<String>()
-    val ipAddress: LiveData<String> = _ipAddress
+    private val _startButtonEvent = MutableLiveData<Event<String>>(Event(""))
+    val startButtonEvent: LiveData<Event<String>> = _startButtonEvent
 
-    init{
-        _ipAddress.value = "192.168.11."
+    var ipAddress = MutableLiveData<String>("192.168.11.")
+
+    fun onStartButtonClicked(){
+//        val regex = Regex(pattern="""\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}""")
+        _startButtonEvent.value = Event("success")
     }
 }

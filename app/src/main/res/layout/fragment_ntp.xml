@@ -5,13 +5,13 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.example.ntpclient.ui.home.HomeViewModel" />
+            type="com.example.ntpclient.ui.ntp.NtpViewModel" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.home.HomeFragment">
+        tools:context=".ui.ntp.NtpFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,25 +19,34 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="IPアドレスを入力してください" />
+                android:text="この端末の時間" />
 
-            <EditText
-                android:id="@+id/ipAdressText"
+            <TextView
+                android:id="@+id/androidTextDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="date"
-                android:text="@{viewmodel.ipAddress}" />
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="調整後の時間" />
+
+            <TextView
+                android:id="@+id/ntpTextDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
             <Button
-                android:id="@+id/startButton"
+                android:id="@+id/adjustButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="@{() -> viewmodel.onStartButtonClicked()}"
-                android:text="▶開始" />
+                android:text="時間の調整" />
 
         </LinearLayout>
     </FrameLayout>
