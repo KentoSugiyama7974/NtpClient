@@ -1,8 +1,10 @@
 package com.example.ntpclient.ui.ntp
 
 import android.os.Handler
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.ntpclient.util.Event
 import kotlin.concurrent.timer
 
 class NtpViewModel : ViewModel() {

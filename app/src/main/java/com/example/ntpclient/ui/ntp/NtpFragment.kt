@@ -10,6 +10,7 @@ import androidx.navigation.fragment.navArgs
 import com.example.ntpclient.R
 import com.example.ntpclient.databinding.FragmentHomeBinding
 import com.example.ntpclient.databinding.FragmentNtpBinding
+import com.example.ntpclient.util.EventObserver
 
 class NtpFragment : Fragment() {
 
@@ -31,5 +32,6 @@ class NtpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.start(args.ipAddress)
+
     }
 }

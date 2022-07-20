@@ -12,7 +12,12 @@ class HomeViewModel : ViewModel() {
     var ipAddress = MutableLiveData<String>("192.168.11.")
 
     fun onStartButtonClicked(){
-//        val regex = Regex(pattern="""\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}""")
-        _startButtonEvent.value = Event("success")
+        val regex = Regex(pattern="""\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}""")
+        if (regex.matches(ipAddress.value?:"")){
+            _startButtonEvent.value = Event("success")
+        }else{
+            _startButtonEvent.value = Event("failure")
+        }
+
     }
 }
