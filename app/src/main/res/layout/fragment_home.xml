@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="date"
-                android:text="@{viewmodel.ipAddress}" />
+                android:text="@={viewmodel.ipAddress}" />
 
             <Button
                 android:id="@+id/startButton"

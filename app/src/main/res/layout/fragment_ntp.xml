@@ -19,6 +19,18 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="入力されたIP" />
+
+            <TextView
+                android:id="@+id/ip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewmodel.ip}"/>
+
+            <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -28,7 +40,7 @@
                 android:id="@+id/androidTextDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@{viewmodel.androidTime}" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -40,12 +52,13 @@
                 android:id="@+id/ntpTextDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@{viewmodel.adjustTime}" />
 
             <Button
                 android:id="@+id/adjustButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> viewmodel.onAdjustButtonClicked()}"
                 android:text="時間の調整" />
 
         </LinearLayout>
